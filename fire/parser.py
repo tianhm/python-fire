@@ -14,10 +14,6 @@
 
 """Provides parsing functionality used by Python Fire."""
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
 import argparse
 import ast
 import sys
@@ -26,6 +22,7 @@ if sys.version_info[0:2] < (3, 8):
   _StrNode = ast.Str
 else:
   _StrNode = ast.Constant
+
 
 def CreateParser():
   parser = argparse.ArgumentParser(add_help=False)
